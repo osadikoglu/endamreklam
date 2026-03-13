@@ -81,3 +81,42 @@ export const FAQS = [
     answer: "Evet, tüm sitelerimiz reklam performansına uygun olarak (LightSpeed) geliştirilmektedir.",
   },
 ];
+
+export const PORTFOLIO_ITEMS = [
+  {
+    id: 1,
+    title: "Modern Restoran",
+    category: "Restoran",
+    image: "/images/portfolio-1.jpg",
+  },
+  {
+    id: 2,
+    title: "Butik Kuaför",
+    category: "Hizmet",
+    image: "/images/portfolio-2.jpg",
+  },
+  {
+    id: 3,
+    title: "Emlak Danışmanlığı",
+    category: "Emlak",
+    image: "/images/portfolio-3.jpg",
+  },
+  {
+    id: 4,
+    title: "Hukuk Bürosu",
+    category: "Kurumsal",
+    image: "/images/portfolio-4.jpg",
+  },
+  {
+    id: 5,
+    title: "Diş Kliniği",
+    category: "Sağlık",
+    image: "/images/portfolio-5.jpg",
+  },
+  {
+    id: 6,
+    title: "Oto Servis",
+    category: "Otomotiv",
+    image: "/images/portfolio-6.jpg",
+  },
+];
