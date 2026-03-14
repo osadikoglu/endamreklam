@@ -1,13 +1,19 @@
 import Link from "next/link";
-import { LayoutGrid } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <LayoutGrid className="h-6 w-6 text-blue-600" />
-          <span className="text-xl font-bold tracking-tight">Endam Reklam</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/endam_logo_2026.svg"
+            alt="Endam Reklam"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
         <div className="hidden space-x-8 md:flex">
           <Link href="/" className="text-sm font-medium hover:text-blue-600">Ana Sayfa</Link>

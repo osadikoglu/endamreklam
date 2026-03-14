@@ -1,8 +1,8 @@
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
 
 export const metadata = {
-  title: "Örnek Tasarımlar | Endam Reklam",
-  description: "Daha önce hayata geçirdiğimiz modern ve hızlı web sitesi tasarımlarını inceleyin.",
+  title: "Tarz Seçimi | Endam Reklam",
+  description: "Classic, Modern veya Minimal — sitenizin tarzını siz seçin, 48 saatte hayata geçirelim.",
 };
 
 export default function PortfolioPage() {
@@ -11,18 +11,20 @@ export default function PortfolioPage() {
       {/* Header Section */}
       <section className="bg-white py-16 lg:py-20 border-b">
         <div className="container mx-auto px-4 text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4">Örnek Çalışmalar</p>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-            Örnek Tasarımlar
+            İstediğiniz Tarzı Seçin!
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            Farklı sektörler için hazırladığımız, hız ve dönüşüm odaklı tasarım şablonlarımızı inceleyin. Tüm tasarımlarımız %100 mobil uyumludur.
+            Hukuk büroları temalı  hazırladığımız üç örnek, farklı tarzı inceleyebilirsiniz.
+            Beğendiğiniz tarzı seçin veya başka bir tarz istiyorsanız belirtin.
           </p>
         </div>
       </section>
 
       {/* Grid Section */}
       <PortfolioGrid />
-      
+
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 text-center">

@@ -2,76 +2,177 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { PORTFOLIO_ITEMS } from "@/lib/constants";
-import { X, ZoomIn } from "lucide-react";
+import { X } from "lucide-react";
+import { PORTFOLIO_ITEMS, GOOGLE_FORM_URL } from "@/lib/constants";
+
+type PortfolioItem = (typeof PORTFOLIO_ITEMS)[number];
+
+const BrowserMockup = ({
+  item,
+  containerClass,
+  imgClass,
+}: {
+  item: PortfolioItem;
+  containerClass: string;
+  imgClass: string;
+}) => (
+  <div className="rounded-t-lg border border-b-0 border-gray-300 overflow-hidden bg-white">
+    {/* Browser Chrome */}
+    <div className="flex items-center gap-1.5 px-3 py-2 bg-gray-100 border-b border-gray-200">
+      <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
+      <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+      <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
+      <div className="ml-2 flex-1 rounded bg-white px-2 py-0.5 text-[10px] text-gray-400 border border-gray-200">
+        endamreklam.com/örnek
+      </div>
+    </div>
+    {/* Screenshot */}
+    <div className={`overflow-hidden ${containerClass}`}>
+      <Image
+        src={item.image}
+        alt={item.title}
+        width={item.imageWidth}
+        height={item.imageHeight}
+        className={`w-full h-auto block ${imgClass}`}
+        quality={85}
+      />
+    </div>
+  </div>
+);
 
 const PortfolioGrid = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selected, setSelected] = useState<PortfolioItem | null>(null);
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {PORTFOLIO_ITEMS.map((item) => (
-          <div
-            key={item.id}
-            className="group relative overflow-hidden rounded-2xl bg-gray-100 shadow-sm transition-all hover:shadow-xl cursor-pointer"
-            onClick={() => setSelectedImage(item.image)}
-          >
-            <div className="aspect-[4/3] relative">
-              {/* Using a placeholder div since images don't exist yet */}
-              <div className="absolute inset-0 flex items-center justify-center bg-blue-50 text-blue-200">
-                <span className="text-lg font-bold uppercase tracking-widest">{item.title}</span>
-              </div>
-              {/* Once images are added, uncomment this:
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              /> 
-              */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
-                <div className="rounded-full bg-white/20 p-4 backdrop-blur-md">
-                  <ZoomIn className="h-8 w-8 text-white" />
+    <>
+      <style>{`
+        @keyframes scroll-preview {
+          0%   { transform: translateY(0); }
+          100% { transform: translateY(calc(-100% + 280px)); }
+        }
+        @keyframes scroll-preview-lg {
+          0%   { transform: translateY(0); }
+          100% { transform: translateY(calc(-100% + 72vh)); }
+        }
+        .scroll-preview {
+          animation: scroll-preview 12s ease-in-out infinite alternate;
+        }
+        .scroll-preview:hover {
+          animation-play-state: paused;
+        }
+        .scroll-preview-lg {
+          animation: scroll-preview-lg 16s ease-in-out infinite alternate;
+        }
+        .scroll-preview-lg:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+
+          {/* Style Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {PORTFOLIO_ITEMS.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col rounded-2xl overflow-hidden border border-gray-200 shadow-md hover:shadow-xl transition-shadow"
+              >
+                {/* Style Badge */}
+                <div className="flex items-center justify-between px-5 py-3 bg-gray-50 border-b border-gray-200">
+                  <span className={`text-sm font-bold uppercase tracking-widest ${item.accentColor}`}>
+                    {item.style}
+                  </span>
+                  <span className="text-xs text-gray-400">{item.category}</span>
+                </div>
+
+                {/* Browser Mockup — clickable */}
+                <button
+                  onClick={() => setSelected(item)}
+                  className="bg-gray-200 px-3 pt-3 text-left cursor-zoom-in"
+                  aria-label={`${item.style} tarzını büyük görüntüle`}
+                >
+                  <BrowserMockup
+                    item={item}
+                    containerClass="h-[280px]"
+                    imgClass="scroll-preview"
+                  />
+                </button>
+
+                {/* Card Footer */}
+                <div className="flex flex-col flex-1 p-5 bg-white gap-4">
+                  <p className="text-sm text-gray-500 flex-1">{item.description}</p>
+                  <a
+                    href={GOOGLE_FORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+                  >
+                    Devam Et
+                  </a>
                 </div>
               </div>
-            </div>
-            <div className="p-6">
-              <span className="mb-2 inline-block text-xs font-bold uppercase tracking-wider text-blue-600">
-                {item.category}
-              </span>
-              <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      {/* Simple Lightbox */}
-      {selectedImage && (
+          {/* Custom Style CTA */}
+          <div className="mt-16 rounded-2xl bg-gray-50 border border-dashed border-gray-300 p-10 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Bunlarla sınırlı değiliz</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              Farklı bir tarz mı istiyorsunuz?
+            </h3>
+            <p className="text-gray-500 mb-8 max-w-xl mx-auto">
+              Yukarıdaki örnekler yalnızca hukuk bürosu için hazırladığımız 3 tarzı gösteriyor.
+              Restoranınız, kliniğiniz, butik mağazanız veya farklı bir işletmeniz için
+              tamamen özel tasarım üretiriz — tarzınızı siz anlatın, biz hayata geçirelim.
+            </p>
+            <a
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+            >
+              Forma Git ve Tarzını Anlat
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {selected && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4"
+          onClick={() => setSelected(null)}
         >
           <button
-            className="absolute right-6 top-6 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
-            onClick={() => setSelectedImage(null)}
+            className="absolute right-5 top-5 rounded-full bg-white/10 p-2 text-white hover:bg-white/20 transition-colors"
+            onClick={() => setSelected(null)}
+            aria-label="Kapat"
           >
-            <X className="h-8 w-8" />
+            <X className="h-6 w-6" />
           </button>
-          <div className="relative max-h-[80vh] max-w-[90vw] aspect-[4/3] w-full max-w-4xl overflow-hidden rounded-xl bg-blue-50 flex items-center justify-center text-blue-200">
-            <span className="text-4xl font-bold uppercase tracking-widest">Önizleme</span>
-            {/* 
-            <Image
-              src={selectedImage}
-              alt="Portfolio Preview"
-              fill
-              className="object-contain"
+
+          {/* Style label */}
+          <div className="absolute top-5 left-1/2 -translate-x-1/2">
+            <span className={`text-sm font-bold uppercase tracking-widest ${selected.accentColor} bg-white/90 px-4 py-1.5 rounded-full`}>
+              {selected.style}
+            </span>
+          </div>
+
+          <div
+            className="w-full max-w-3xl bg-gray-200 rounded-2xl px-4 pt-4 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <BrowserMockup
+              item={selected}
+              containerClass="h-[72vh]"
+              imgClass="scroll-preview-lg"
             />
-            */}
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
