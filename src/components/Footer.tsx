@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LayoutGrid, Mail, Phone } from "lucide-react";
+import { LayoutGrid, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -26,8 +26,6 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-gray-900">Yasal</h4>
             <ul className="space-y-2">
-              <li><Link href="/mesafeli-satis-sozlesmesi" className="text-sm text-gray-600 hover:text-blue-600">Mesafeli Satış Sözleşmesi</Link></li>
-              <li><Link href="/kvkk" className="text-sm text-gray-600 hover:text-blue-600">KVKK ve Gizlilik</Link></li>
               <li><Link href="/cerez-politikasi" className="text-sm text-gray-600 hover:text-blue-600">Çerez Politikası</Link></li>
             </ul>
           </div>
@@ -35,12 +33,8 @@ const Footer = () => {
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-gray-900">İletişim</h4>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-gray-600">
-                <Phone className="h-4 w-4" />
-                <span>+90 5XX XXX XX XX</span>
-              </li>
-              <li className="flex items-center gap-2 text-sm text-gray-600">
                 <Mail className="h-4 w-4" />
-                <span>iletisim@endamreklam.com</span>
+                <span>endamreklam@gmail.com</span>
               </li>
             </ul>
           </div>

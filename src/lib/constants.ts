@@ -84,11 +84,11 @@ export const FAQS = [
   },
   {
     question: "Ekstra masrafım olacak mı?",
-    answer: "Ekonomik pakette hosting ve domain size aittir. Kapsamlı pakette ise ilk yıl hiçbir ekstra masrafınız olmaz.",
+    answer: "Seçtiğiniz paketlerde taahhüt edilen hizmetler için ekstra bir masrafınız olmayacaktır.",
   },
   {
     question: "SSL sertifikası var mı?",
-    answer: "Kapsamlı paketimizde SSL sertifikası ömür boyu ücretsiz olarak sunulmaktadır.",
+    answer: "SSL sertifikası, kullandığımız altyapı (Cloudflare) tarafından ücretsiz olarak sağlanmaktadır. Siteniz aktif olduğu sürece ek ücret ödemezsiniz.",
   },
   {
     question: "Google reklamı verebilir miyim?",
