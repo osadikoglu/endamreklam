@@ -16,7 +16,7 @@ const Hero = () => {
             <span className="text-blue-600">Web Siteniz Yayında</span>
           </h1>
           <p className="mb-10 max-w-2xl text-lg text-gray-600 md:text-xl">
-            Aylar süren süreçler ve binlerce liralık faturalar bitti. 1299 TL'den başlayan fiyatlarla, modern ve mobil uyumlu web sitenize hemen kavuşun.
+            Aylar süren süreçler ve binlerce liralık faturalar bitti. 1299 TL&apos;den başlayan fiyatlarla, modern ve mobil uyumlu web sitenize hemen kavuşun.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link

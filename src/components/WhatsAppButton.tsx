@@ -3,11 +3,21 @@
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/lib/constants";
 
+interface DataLayer {
+  push: (data: object) => void;
+}
+
+declare global {
+  interface Window {
+    dataLayer?: DataLayer;
+  }
+}
+
 const WhatsAppButton = () => {
   const handleClick = () => {
     // GTM event trigger (assuming GTM is loaded via script tag in layout)
-    if (typeof window !== "undefined" && (window as any).dataLayer) {
-      (window as any).dataLayer.push({
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
         event: "whatsapp_click",
         platform: "whatsapp",
       });
