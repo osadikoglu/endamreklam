@@ -94,7 +94,7 @@ export default function PaymentSuccessPage() {
                   }}
                 >
                   <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
-                    {pkg.isAddon ? "Ekstra" : "Paket"}
+                    Ödeme Seçeneği
                   </span>
                   <span className="text-lg font-bold text-gray-900">{pkg.name}</span>
                   <div className="mt-2 flex items-center gap-2 text-xl font-black text-gray-900">

@@ -37,7 +37,6 @@ export default function PortfolioPage() {
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6 text-2xl font-bold text-gray-900">Beğendiğiniz bir tasarım mı var?</h2>
           <p className="mb-8 text-gray-600">Hemen seçiminizi yapın, 48 saat içinde sizin için uyarlayalım.</p>
           <a
             href="/paketler"

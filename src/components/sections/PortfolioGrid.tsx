@@ -121,19 +121,11 @@ const PortfolioGrid = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
               Farklı bir tarz mı istiyorsunuz?
             </h3>
-            <p className="text-gray-500 mb-8 max-w-xl mx-auto">
+            <p className="text-gray-500 max-w-xl mx-auto">
               Yukarıdaki örnekler yalnızca hukuk bürosu için hazırladığımız 3 tarzı gösteriyor.
               Restoranınız, kliniğiniz, butik mağazanız veya farklı bir işletmeniz için
               tamamen özel tasarım üretiriz — tarzınızı siz anlatın, biz hayata geçirelim.
             </p>
-            <a
-              href={GOOGLE_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
-            >
-              Forma Git ve Tarzını Anlat
-            </a>
           </div>
 
         </div>
