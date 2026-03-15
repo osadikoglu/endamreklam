@@ -1,5 +1,5 @@
-export const GOOGLE_FORM_URL = "https://forms.gle/your-form-id"; // Placeholder, update later
-export const WHATSAPP_NUMBER = "905000000000"; // Placeholder, update later
+export const GOOGLE_FORM_URL = "https://forms.gle/fRgfkU62A5R9Q2LKA";
+export const WHATSAPP_NUMBER = "905325824453";
 export const SITE_URL = "https://endamreklam.com";
 
 export const PACKAGES = [
@@ -26,7 +26,7 @@ export const PACKAGES = [
       "Form doldurulduktan sonra 2 iş günü içinde siteniz teslim edilir",
       "Teslim öncesi 1 revizyon hakkınız vardır",
     ],
-    buttonText: "Hemen Başla",
+    buttonText: "Bu Paketi İstiyorum",
     highlight: false,
   },
   {
@@ -46,7 +46,7 @@ export const PACKAGES = [
       "Form doldurulduktan sonra 2 iş günü içinde siteniz teslim edilir",
       "Teslim öncesi 1 revizyon hakkınız vardır",
     ],
-    buttonText: "Hemen Başla",
+    buttonText: "Bu Paketi İstiyorum",
     highlight: true,
   },
   {
@@ -68,7 +68,7 @@ export const PACKAGES = [
       "Teslim öncesi 1 revizyon hakkınız vardır",
       "⚠️ Reklam yayını için Google ve Meta'ya ayrıca reklam bütçesi ödenir (aylık minimum 500 TL önerilir) — bu tutar bize değil, direkt reklam platformlarına gider",
     ],
-    buttonText: "Hemen Başla",
+    buttonText: "Bu Paketi İstiyorum",
     highlight: false,
   },
 ];

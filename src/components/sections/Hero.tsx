@@ -16,14 +16,14 @@ const Hero = () => {
             <span className="text-blue-600">Web Siteniz Yayında</span>
           </h1>
           <p className="mb-10 max-w-2xl text-lg text-gray-600 md:text-xl">
-            Aylar süren süreçler ve binlerce liralık faturalar bitti. 1990 TL'den başlayan fiyatlarla, modern ve mobil uyumlu web sitenize hemen kavuşun.
+            Aylar süren süreçler ve binlerce liralık faturalar bitti. 1299 TL'den başlayan fiyatlarla, modern ve mobil uyumlu web sitenize hemen kavuşun.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
               href={GOOGLE_FORM_URL}
               className="rounded-full bg-blue-600 px-8 py-4 text-lg font-bold text-white shadow-xl hover:bg-blue-700 transition-all hover:scale-105 active:scale-95"
             >
-              Hemen Başla
+              Başvuru Yap
             </Link>
             <Link
               href="/portfolyo"
@@ -32,7 +32,7 @@ const Hero = () => {
               Örnekleri Gör
             </Link>
           </div>
-          
+
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600">
@@ -55,7 +55,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Background blobs */}
       <div className="absolute left-1/2 top-1/2 -z-10 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-50/50 blur-3xl" />
     </section>
