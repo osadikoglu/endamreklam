@@ -1,9 +1,10 @@
 import PricingTable from "@/components/sections/PricingTable";
 import ContextualFAQ from "@/components/sections/ContextualFAQ";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 
 export const metadata = {
   title: "Paketler ve Fiyatlandırma | Endam Reklam",
-  description: "İşletmeniz için en uygun web sitesi paketini seçin. 1990 TL'den başlayan fiyatlarla 48 saatte yayına alın.",
+  description: "İşletmeniz için en uygun web sitesi paketini seçin. 1299 TL'den başlayan fiyatlarla 48 saatte yayına alın.",
 };
 
 export default function PackagesPage() {
@@ -24,26 +25,26 @@ export default function PackagesPage() {
       {/* Pricing Section */}
       <PricingTable />
 
-      {/* FAQ Section */}
-      <ContextualFAQ />
-
-      {/* CTA Section */}
-      <section className="bg-white py-20">
+      {/* Özel Teklif CTA Section - Paketlerin hemen altında */}
+      <section className="py-12 bg-gray-50/30">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl rounded-3xl bg-blue-600 p-8 text-center text-white md:p-12">
-            <h2 className="mb-6 text-3xl font-bold">Özel Bir Talebiniz mi Var?</h2>
+          <div className="mx-auto max-w-4xl rounded-3xl bg-blue-600 p-8 text-center text-white md:p-12 shadow-2xl">
+            <h2 className="mb-6 text-3xl font-bold">İhtiyacınız Bunlardan Fazlası mı?</h2>
             <p className="mb-8 text-lg text-blue-100">
-              Eğer paketler dışında özel bir çözüm arıyorsanız, bize WhatsApp üzerinden yazın, hızlıca değerlendirelim.
+              E-ticaret, rezervasyon sistemi, çok sayfalı kurumsal site veya özel bir ihtiyacınız varsa size özel teklif hazırlayalım.
             </p>
             <a
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "905000000000"}`}
-              className="inline-block rounded-full bg-white px-10 py-4 text-lg font-bold text-blue-600 shadow-xl hover:bg-gray-100 transition-all"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              className="inline-block rounded-full bg-white px-10 py-4 text-lg font-bold text-blue-600 shadow-xl hover:bg-gray-100 transition-all active:scale-95"
             >
-              WhatsApp ile Sorun
+              WhatsApp&apos;tan Teklif Alın →
             </a>
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <ContextualFAQ />
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
+import CompletedProjects from "@/components/sections/CompletedProjects";
 
 export const metadata = {
-  title: "Tarz Seçimi | Endam Reklam",
-  description: "Classic, Modern veya Minimal — sitenizin tarzını siz seçin, 48 saatte hayata geçirelim.",
+  title: "Portfolyo ve Tamamlanan İşler | Endam Reklam",
+  description: "Daha önce tamamladığımız projeler ve seçebileceğiniz farklı tasarım tarzları.",
 };
 
 export default function PortfolioPage() {
@@ -11,18 +12,26 @@ export default function PortfolioPage() {
       {/* Header Section */}
       <section className="bg-white py-16 lg:py-20 border-b">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4">Örnek Çalışmalar</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4">Portfolyo</p>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-            İstediğiniz Tarzı Seçin!
+            Sizin İçin Neler Yapabiliriz?
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            Hukuk büroları temalı  hazırladığımız üç örnek, farklı tarzı inceleyebilirsiniz.
-            Beğendiğiniz tarzı seçin veya başka bir tarz istiyorsanız belirtin.
+            Daha önce tamamladığımız projeleri inceleyin veya kendi işletmeniz için hayal ettiğiniz tarzı seçin.
           </p>
         </div>
       </section>
 
-      {/* Grid Section */}
+      {/* Completed Projects Section */}
+      <CompletedProjects />
+
+      {/* Style Selection Section */}
+      <div className="bg-gray-50/50 py-16 border-t border-b">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Tasarım Tarzınızı Belirleyin</h2>
+          <p className="text-gray-600">Hukuk bürosu üzerinden hazırladığımız 3 farklı tarzı inceleyerek vizyonunuzu netleştirin.</p>
+        </div>
+      </div>
       <PortfolioGrid />
 
       {/* CTA Section */}
