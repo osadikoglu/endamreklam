@@ -15,7 +15,7 @@ export default function KVKKPage() {
           <div className="space-y-2 bg-gray-50 p-6 rounded-2xl border">
             <p><span className="font-bold">Oğuzhan Sadıkoğlu / Endam Reklam</span></p>
             <p>Altıntepe Mah. İstasyon Yolu Sk. No: 3 İç Kapı No: 1 Maltepe / İstanbul</p>
-            <p>iletisim@endamreklam.com</p>
+            <p>endamreklam@gmail.com</p>
           </div>
         </section>
 
@@ -91,7 +91,7 @@ export default function KVKKPage() {
             <li>Otomatik sistemler aracılığıyla aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
             <li>Kanuna aykırı işleme nedeniyle zarara uğramanız halinde tazminat talep etme</li>
           </ul>
-          <p className="mt-4 font-bold">Başvurularınızı iletisim@endamreklam.com adresine iletebilirsiniz. Talepler en geç 30 gün içinde yanıtlanır.</p>
+          <p className="mt-4 font-bold">Başvurularınızı endamreklam@gmail.com adresine iletebilirsiniz. Talepler en geç 30 gün içinde yanıtlanır.</p>
         </section>
       </div>
     </div>

@@ -19,7 +19,7 @@ export default function SalesAgreementPage() {
             <p>Vergi Dairesi: Küçükyalı</p>
             <p>Vergi Numarası: 70117180926</p>
             <p>Adres: Altıntepe Mah. İstasyon Yolu Sk. No: 3 İç Kapı No: 1 Maltepe / İstanbul</p>
-            <p>E-posta: iletisim@endamreklam.com</p>
+            <p>E-posta: endamreklam@gmail.com</p>
             <p className="mt-4"><span className="font-bold">Alıcı:</span> Web sitesi üzerinden başvuruda bulunan kişi veya işletme.</p>
           </div>
         </section>

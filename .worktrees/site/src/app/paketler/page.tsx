@@ -9,28 +9,26 @@ export const metadata = {
 
 export default function PackagesPage() {
   return (
-    <div className="flex flex-col bg-white dark:bg-gray-900">
+    <div className="flex flex-col bg-gray-50/30">
       {/* Header Section */}
-      <section className="bg-white py-16 lg:py-24 border-b dark:bg-gray-900 dark:border-gray-800">
+      <section className="bg-white py-16 lg:py-20 border-b">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
             Paketler ve Fiyatlandırma
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
             Gizli maliyet yok, aylık aidat yok. Tek seferlik ödeme ile profesyonel bir dijital varlığa sahip olun.
           </p>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="bg-gray-50/50 py-12 dark:bg-gray-800/30">
-        <PricingTable />
-      </section>
+      <PricingTable />
 
       {/* Özel Teklif CTA Section - Paketlerin hemen altında */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-12 bg-gray-50/30">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl rounded-3xl bg-blue-600 p-8 text-center text-white md:p-12 shadow-2xl shadow-blue-600/20">
+          <div className="mx-auto max-w-4xl rounded-3xl bg-blue-600 p-8 text-center text-white md:p-12 shadow-2xl">
             <h2 className="mb-6 text-3xl font-bold">İhtiyacınız Bunlardan Fazlası mı?</h2>
             <p className="mb-8 text-lg text-blue-100">
               E-ticaret, rezervasyon sistemi, çok sayfalı kurumsal site veya özel bir ihtiyacınız varsa size özel teklif hazırlayalım.
@@ -46,9 +44,7 @@ export default function PackagesPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="bg-gray-50/50 py-12 dark:bg-gray-800/30 border-t border-b dark:border-gray-800">
-        <ContextualFAQ />
-      </section>
+      <ContextualFAQ />
     </div>
   );
 }
