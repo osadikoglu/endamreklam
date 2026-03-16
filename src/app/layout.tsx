@@ -35,7 +35,8 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
-        {/* GTM script is now moved to body */}
+        <link rel="icon" href="/images/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
       </head>
       <body className={inter.className}>
         <Script
