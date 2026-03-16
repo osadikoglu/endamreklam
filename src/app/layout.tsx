@@ -9,7 +9,7 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-XXXXXXX";
+const GTM_ID = "GTM-PGSF7437";
 
 export const metadata: Metadata = {
   title: "Endam Reklam | 48 Saatte Web Sitesi & Dijital Varlık",
