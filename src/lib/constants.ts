@@ -2,6 +2,8 @@ export const GOOGLE_FORM_URL = "https://forms.gle/fRgfkU62A5R9Q2LKA";
 export const WHATSAPP_NUMBER = "905325824453";
 export const SITE_URL = "https://endamreklam.com";
 
+export const BASE_PRICE = "1.999 TL";
+
 export const PACKAGES = [
   {
     id: "paket-1",
