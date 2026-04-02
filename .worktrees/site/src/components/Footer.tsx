@@ -12,14 +12,13 @@ const Footer = () => {
               <span className="text-xl font-bold tracking-tight">Endam Reklam</span>
             </Link>
             <p className="text-sm text-gray-600">
-              48 saatte profesyonel ve uygun fiyatlı web çözümleri.
+              48 saatte profesyonel web siteleri.
             </p>
           </div>
           <div>
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-gray-900">Kurumsal</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="text-sm text-gray-600 hover:text-blue-600">Ana Sayfa</Link></li>
-              <li><Link href="/paketler" className="text-sm text-gray-600 hover:text-blue-600">Paketler</Link></li>
               <li><Link href="/portfolyo" className="text-sm text-gray-600 hover:text-blue-600">Portfolyo</Link></li>
             </ul>
           </div>
