@@ -5,7 +5,7 @@ const reasons = [
     icon: <Server className="h-6 w-6 text-blue-600" />,
     title: "Ücretsiz Hosting",
     description:
-      "Siteniz Cloudflare Pages altyapısında barındırılır. Aylık hosting faturası ödemezsiniz.",
+      "Siteniz Cloudflare Pages altyapısında barındırılır. Aylık hosting faturası ödemezsiniz. Cloudflare'in ücretsiz planı küçük işletmeler için fazlasıyla yeterli. Sizi gereksiz hosting paketlerine yönlendirmiyoruz.",
   },
   {
     icon: <ShieldCheck className="h-6 w-6 text-blue-600" />,

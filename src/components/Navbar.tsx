@@ -27,7 +27,6 @@ const Navbar = () => {
         </Link>
         <div className="hidden space-x-8 md:flex">
           <Link href="/" className="text-sm font-medium hover:text-blue-600">Ana Sayfa</Link>
-          <Link href="/portfolyo" className="text-sm font-medium hover:text-blue-600">Portfolyo</Link>
         </div>
         <div>
           <a

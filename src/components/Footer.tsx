@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { LayoutGrid, Mail } from "lucide-react";
+import Image from "next/image";
+import { Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,9 +8,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <LayoutGrid className="h-6 w-6 text-blue-600" />
-              <span className="text-xl font-bold tracking-tight">Endam Reklam</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/endam_logo_2026.svg"
+                alt="Endam Reklam"
+                width={160}
+                height={40}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-sm text-gray-600">
               48 saatte profesyonel web siteleri.
@@ -19,7 +25,6 @@ const Footer = () => {
             <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-gray-900">Kurumsal</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="text-sm text-gray-600 hover:text-blue-600">Ana Sayfa</Link></li>
-              <li><Link href="/portfolyo" className="text-sm text-gray-600 hover:text-blue-600">Portfolyo</Link></li>
             </ul>
           </div>
           <div>
@@ -33,7 +38,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-sm text-gray-600">
                 <Mail className="h-4 w-4" />
-                <span>endamreklam@gmail.com</span>
+                <span>iletisim@endamreklam.com</span>
               </li>
             </ul>
           </div>
