@@ -6,55 +6,37 @@ import {
   MapPin,
   MessageCircle,
   FileText,
-  BarChart2,
   Smartphone,
   ExternalLink,
   ArrowRight,
   Star,
   Zap,
   Sparkles,
-  Calendar,
   Link as LinkIcon,
+  BookOpen,
+  Scale,
+  ShieldCheck,
+  CheckCircle,
 } from "lucide-react";
-import MuhasebeContactForm from "@/components/sections/MuhasebeContactForm";
+import AvukatContactForm from "@/components/sections/AvukatContactForm";
 import { WHATSAPP_NUMBER } from "@/lib/constants";
 
 export const metadata = {
-  title: "Muhasebe ve SMMM Ofisleri için Web Sitesi | Endam Reklam",
+  title: "Avukatlık Büroları için Web Sitesi Tanıtımı | Endam Reklam",
   description:
-    "Muhasebe ve SMMM ofislerine özel, 48 saatte teslim, tek seferlik 1.999 TL profesyonel web sitesi. Demo'yu inceleyin, hemen başvurun.",
+    "Avukatlık bürolarına özel, TBB kurallarına uygun, 48 saatte teslim, profesyonel web sitesi tanıtımı. Demo'yu inceleyin, hemen başvurun.",
 };
 
 const FEATURES = [
   {
     icon: Smartphone,
     title: "Mobil Uyumlu Tasarım",
-    desc: "Müşterileriniz telefon veya bilgisayardan kusursuz bir deneyim yaşar.",
+    desc: "Müvekkilleriniz telefon veya bilgisayardan kusursuz bir deneyim yaşar.",
   },
   {
     icon: Globe,
     title: "Cloudflare Hosting & SSL Dahil",
     desc: "Mevcut alan adınız kullanılır. Cloudflare altyapısında ücretsiz hosting ve SSL sertifikası.",
-  },
-  {
-    icon: Sparkles,
-    title: "Yapay Zeka Destekli Tasarım",
-    desc: "Sektörünüze özel içerik ve görsel yapı YZ ile hızlı ve uygun maliyetli üretilir.",
-  },
-  {
-    icon: Calendar,
-    title: "Vergi & SGK Takvimi",
-    desc: "Aylık beyanname ve ödeme tarihlerini gösteren interaktif takvim sitenizde hazır.",
-  },
-  {
-    icon: LinkIcon,
-    title: "Hızlı Erişim Linkleri",
-    desc: "GİB, SGK, e-Fatura, e-Devlet gibi sık kullanılan resmi sitelere tek tıkla erişim.",
-  },
-  {
-    icon: FileText,
-    title: "Sektöre Özel İçerik",
-    desc: "Hizmetler, SSS ve faydalı bilgiler bölümleri muhasebe sektörüne özel hazırlanmış olarak teslim edilir.",
   },
   {
     icon: MessageCircle,
@@ -64,30 +46,50 @@ const FEATURES = [
   {
     icon: MapPin,
     title: "Google Harita Entegrasyonu",
-    desc: "Ofis konumunuz sitede interaktif harita ile gösterilir.",
+    desc: "Büro konumunuz sitede interaktif harita ile gösterilir.",
   },
   {
-    icon: BarChart2,
-    title: "Google Analytics",
-    desc: "Kaç kişi sitenizi ziyaret ettiğini, nereden geldiğini takip edin.",
+    icon: Sparkles,
+    title: "Yapay Zeka Destekli Tasarım",
+    desc: "Sektörünüze özel içerik ve görsel yapı YZ ile hızlı ve uygun maliyetli üretilir.",
   },
   {
-    icon: Globe,
-    title: "Sosyal Medya Bağlantıları",
-    desc: "Instagram ve Facebook profilleriniz siteye entegre edilir.",
+    icon: BookOpen,
+    title: "Hukuki Sözlük",
+    desc: "Günün terimi ve arama özellikli hukuk terimleri sözlüğü sitenizde hazır gelir.",
+  },
+  {
+    icon: LinkIcon,
+    title: "Hızlı Erişim Linkleri",
+    desc: "UYAP, Mevzuat, Yargıtay, AİHM gibi sık kullanılan resmi sitelere tek tıkla erişim.",
+  },
+  {
+    icon: Scale,
+    title: "Uzmanlık Alanları Sayfası",
+    desc: "Hukuk dallarınız ayrıntılı şekilde ziyaretçilere sunulur.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "KVKK & Yasal Uyarı Sayfaları",
+    desc: "Avukatlık Kanunu ve Baro kurallarına uygun yasal sayfalar hazır teslim edilir.",
+  },
+  {
+    icon: CheckCircle,
+    title: "Teslim Öncesi Onay Aşaması",
+    desc: "Yayına girmeden son kontrol sizde.",
   },
 ];
 
 const HIGHLIGHTS = [
-  "Muhasebe sektörüne özel tasarım dili",
-  "Teslim öncesi onay aşaması - yayına girmeden son kontrol sizde.",
+  "Avukatlık meslek etik kurallarına uygun tasarım",
+  "Tanıtım odaklı içerik yapısı",
   "48 saat içinde teslim",
   "Gizli maliyet yok, aylık aidat yok",
   "Hesap ve şifre size teslim edilir",
 ];
 
-export default function MuhasebePage() {
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Merhaba, muhasebe/SMMM ofisi için web sitesi hakkında bilgi almak istiyorum.")}`;
+export default function AvukatPage() {
+  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Merhaba, avukatlık bürosu için web sitesi tanıtımı hakkında bilgi almak istiyorum.")}`;
 
   return (
     <div className="flex flex-col bg-white">
@@ -98,12 +100,12 @@ export default function MuhasebePage() {
 
         <div className="container relative mx-auto px-4 text-center">
           <span className="mb-6 inline-block rounded-full bg-blue-50 px-4 py-1.5 text-sm font-semibold text-blue-600">
-            Muhasebe &amp; SMMM Ofisleri için
+            Avukatlık Büroları için
           </span>
 
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-            Muhasebe &amp; SMMM Ofisleri için<br />
-            <span className="text-blue-600">Modern Web Sitesi - 48 Saatte Teslim</span>
+            Avukatlık Büronuz için<br />
+            <span className="text-blue-600">Modern Web Sitesi — 48 Saatte Teslim</span>
           </h1>
 
           <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600">
@@ -118,7 +120,7 @@ export default function MuhasebePage() {
               Hemen Başvur
             </a>
             <a
-              href="https://smmm.endamreklam.com"
+              href="https://avukat.endamreklam.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full border-2 border-gray-200 bg-white px-8 py-4 text-lg font-bold text-gray-900 transition-all hover:border-blue-600 hover:text-blue-600"
@@ -136,10 +138,10 @@ export default function MuhasebePage() {
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-center">
               <h2 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
-                Siteniz Böyle Görünür
+                Büronuzun Dijital Yüzü
               </h2>
               <p className="text-gray-600">
-                Demo sitede tüm sayfaları ve tasarımı inceleyebilirsiniz.
+                Demo sitede tüm sayfaları ve meslek kurallarına uygun tasarımı inceleyebilirsiniz.
               </p>
             </div>
 
@@ -154,30 +156,29 @@ export default function MuhasebePage() {
                 </div>
                 <div className="flex flex-1 items-center justify-center gap-2 rounded-md bg-white border border-gray-200 px-3 py-1.5">
                   <span className="text-xs font-medium text-gray-400">🔒</span>
-                  <span className="text-xs font-medium text-gray-500">smmm.endamreklam.com</span>
+                  <span className="text-xs font-medium text-gray-500">avukat.endamreklam.com</span>
                 </div>
               </div>
 
               {/* Content preview */}
               <div className="flex flex-col items-center gap-6 px-8 py-12 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/30">
-                  <BarChart2 className="h-8 w-8" />
+                  <Scale className="h-8 w-8" />
                 </div>
                 <div>
                   <p className="mb-1 text-sm font-semibold uppercase tracking-widest text-blue-600">
                     Canlı Demo
                   </p>
                   <h3 className="mb-3 text-xl font-bold text-gray-900">
-                    Örnek SMMM Ofisi Web Sitesi
+                    Örnek Avukatlık Bürosu Tanıtım Sitesi
                   </h3>
                   <p className="mx-auto max-w-md text-sm text-gray-600">
-                    Gerçek bir muhasebe ofisi gibi tasarlanmış demo siteyi ziyaret
-                    ederek tüm bölümleri, mobil görünümü ve iletişim formunu
-                    inceleyebilirsiniz.
+                    Avukatlık Kanunu ve reklam yasağına uygun olarak tasarlanmış demo siteyi ziyaret
+                    ederek tüm bölümleri ve kurumsal yapıyı inceleyebilirsiniz.
                   </p>
                 </div>
                 <a
-                  href="https://smmm.endamreklam.com"
+                  href="https://avukat.endamreklam.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg transition-all hover:bg-blue-700 hover:scale-105 active:scale-95"
@@ -196,10 +197,10 @@ export default function MuhasebePage() {
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-              Neler Dahil?
+              Paket İçeriği
             </h2>
             <p className="mx-auto max-w-xl text-lg text-gray-600">
-              Siteniz hazırlandığında aşağıdaki her şey eksiksiz teslim edilir.
+              Büronuzun dijital tanıtımı için gerekli tüm özellikler paketimize dahildir.
             </p>
           </div>
 
@@ -228,7 +229,7 @@ export default function MuhasebePage() {
               Fiyatlandırma
             </h2>
             <p className="mx-auto max-w-xl text-lg text-gray-600">
-              Tek seferlik ödeme. Sonrasında yalnızca yıllık alan adı yenilemesi (~400 TL/yıl).
+              Tek seferlik ödeme. Şeffaf ve sürpriz maliyetsiz hizmet.
             </p>
           </div>
 
@@ -236,7 +237,7 @@ export default function MuhasebePage() {
             <div className="relative rounded-3xl bg-white p-8 shadow-xl ring-2 ring-blue-600 md:p-10">
               {/* Badge */}
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-5 py-1.5 text-xs font-bold uppercase tracking-widest text-white shadow">
-                Muhasebe &amp; SMMM Paketi
+                Avukatlık &amp; Hukuk Paketi
               </div>
 
               {/* Price */}
@@ -289,27 +290,27 @@ export default function MuhasebePage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
                   <Star className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">Sektöre Özel</h3>
+                <h3 className="text-lg font-bold">Mesleğe Uygun</h3>
                 <p className="text-sm leading-relaxed text-gray-400">
-                  Muhasebe ve SMMM ofislerinin ihtiyaçlarına özel tasarım ve içerik yapısı.
+                  Avukatlık meslek etik kurallarına ve reklam yasağına tam uyumlu yapı.
                 </p>
               </div>
               <div className="flex flex-col items-center gap-3 text-center">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
                   <Zap className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">48 Saatte Yayında</h3>
+                <h3 className="text-lg font-bold">48 Saatte Hazır</h3>
                 <p className="text-sm leading-relaxed text-gray-400">
-                  Formu doldurduktan sonra 2 iş günü içinde siteniz hazır ve yayında.
+                  Bilgilerinizi ilettikten sonra 2 iş günü içinde büronuz dijital dünyada yerini alır.
                 </p>
               </div>
               <div className="flex flex-col items-center gap-3 text-center">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
                   <Shield className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold">Şeffaf Fiyat</h3>
+                <h3 className="text-lg font-bold">Tam Şeffaflık</h3>
                 <p className="text-sm leading-relaxed text-gray-400">
-                  Tek seferlik ödeme, gizli maliyet yok, aylık aidat yok.
+                  Tek seferlik ödeme, aylık aidat yok, gizli maliyet yok.
                 </p>
               </div>
             </div>
@@ -324,11 +325,11 @@ export default function MuhasebePage() {
             {/* Left */}
             <div className="flex flex-col justify-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
-                Hemen Başlayalım
+                Bilgi Alın
               </h2>
               <p className="mb-8 text-lg text-gray-600">
-                Formu doldurun, sizi WhatsApp üzerinden arayalım. Sorunuz varsa
-                doğrudan mesaj da atabilirsiniz.
+                Formu doldurun, sizi WhatsApp üzerinden bilgilendirelim. Sorularınız için
+                doğrudan mesaj da iletebilirsiniz.
               </p>
 
               {/* WA direct */}
@@ -339,29 +340,29 @@ export default function MuhasebePage() {
                 className="flex w-fit items-center gap-3 rounded-full bg-green-500 px-6 py-3 text-base font-bold text-white shadow-lg shadow-green-500/30 transition-all hover:bg-green-600 hover:scale-105 active:scale-95"
               >
                 <MessageCircle className="h-5 w-5" />
-                WhatsApp&apos;tan Yaz
+                WhatsApp&apos;tan Yazın
               </a>
 
               <div className="mt-10 space-y-3">
                 <div className="flex items-start gap-3 text-sm text-gray-600">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
-                  Genellikle birkaç saat içinde geri dönüyoruz.
+                  Mesai saatlerinde hızla dönüş sağlıyoruz.
                 </div>
                 <div className="flex items-start gap-3 text-sm text-gray-600">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
-                  Demo siteyi birlikte inceleyebiliriz.
+                  TBB kurallarına uygunluğu birlikte değerlendirebiliriz.
                 </div>
                 <div className="flex items-start gap-3 text-sm text-gray-600">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
-                  Ödeme sonrası 48 saat içinde teslimat.
+                  Ödeme sonrası 48 saatte teslimat garantisi.
                 </div>
               </div>
             </div>
 
             {/* Right — Form */}
             <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-100 md:p-10">
-              <h3 className="mb-6 text-xl font-bold text-gray-900">Bilgilerinizi Bırakın</h3>
-              <MuhasebeContactForm />
+              <h3 className="mb-6 text-xl font-bold text-gray-900">İletişim Bilgileriniz</h3>
+              <AvukatContactForm />
             </div>
           </div>
         </div>
